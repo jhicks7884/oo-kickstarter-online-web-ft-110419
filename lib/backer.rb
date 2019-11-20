@@ -1,13 +1,13 @@
 class Backer
-  attr_reader :name
+  attr_reader :name, :backed_projects
 
   def initialize(name)
     @name =name
     @backers = []
   end
 
-  def add_backer(backer)
-    @backer << backer
-    backer.backed_projects << self
+  def back_project(project)
+    @backed_projects << projects
+    project.backers << self
   end
 end
